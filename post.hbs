@@ -1,0 +1,66 @@
+{{!< default}}
+
+{{> header}}
+
+{{#post}}
+
+<div class="container">
+    <div id="primary">
+        <div id="content" role="main">
+
+            <article class="post">
+				
+	        <h1 class="title">{{{title}}}</h1>
+		    <div class="post-meta">
+                        <span class="comments-link">&nbsp;</span>
+		    </div><!--/post-meta -->
+						
+		    <div class="the-content">
+		        {{content}}
+		    </div><!-- the-content -->
+						
+		    <div class="meta clearfix">
+                        <div class="category">
+                            <ul class="post-categories">
+                            {{#tags}}
+                            <li>{{name}}</li>
+                            {{/tags}}
+                            </ul>
+                        </div>
+                        <div class="tags"></div>
+                    </div><!-- Meta -->						
+						
+	    {{#if author}}
+                <section class="author">
+                    <h4>{{author.name}}</h4>
+                    <p>{{author.bio}}</p>
+                    {{#if author.image}}<p><img src="{{author.image}}" alt="{{author.name}}" class="avatar avatar-100 photo" height="100" width="100" /></p>{{/if}}
+                </section>
+            {{/if}}
+
+<section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <i class="fa fa-twitter"></i>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <i class="fa fa-facebook-square"></i>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+    <i class="fa fa-google-plus-square"></i>
+    </a>
+</section>
+
+</article>
+
+
+        </div><!-- #content .site-content -->
+    </div><!-- #primary .content-area -->
+</div>
+
+{{/post}}
+
+{{> footer}}

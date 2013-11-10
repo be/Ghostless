@@ -18,13 +18,16 @@ Ghost Admin -> Settings -> General -> Blog Logo.
 
 #### How do I add an author image?
 
-Ghost Admin -> Settings -> User -> Profile Picture
+Ghost Admin -> Settings -> User -> Profile Picture.
+
+#### How do I enable Disqus comments?
+
+Edit post.hbs, search for `disqus_shortname` and replace it's `example` value with your Disqus user short name.
 
 ### Limitations
 
 Please note that due to limitations in Ghost the following features are not yet available:
 
-- comments
 - pages
 - navigation links
 - category links
